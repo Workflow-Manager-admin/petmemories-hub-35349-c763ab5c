@@ -1,0 +1,133 @@
+.timeline-container {
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.timeline-vertical {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 38px;
+}
+
+.timeline-event {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2.5em;
+  min-height: 68px;
+  position: relative;
+}
+
+.event-dot {
+  position: absolute;
+  left: -30px;
+  top: 0.75em;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: var(--primary, #FFB347);
+  border: 3px solid var(--accent, #6EC6CA);
+  z-index: 1;
+  box-shadow: 0 0 0 3px #FFF8E1;
+}
+
+.timeline-line {
+  position: relative;
+  left: -19.5px;
+  width: 5px;
+  height: 38px;
+  background: linear-gradient(to bottom, var(--accent, #6EC6CA) 50%, #fff8e1 100%);
+  margin-bottom: 3px;
+  border-radius: 2px;
+}
+
+.event-content {
+  background: #fff8e1;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px 0 rgba(255, 179, 71, 0.11);
+  padding: 1.17em 1.4em;
+  margin-left: 0.8em;
+  min-width: 0;
+  flex: 1;
+  max-width: 480px;
+}
+
+.event-details {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1em;
+}
+
+.event-icon {
+  font-size: 2.09em;
+  margin-top: 0.09em;
+  color: var(--primary, #FFB347);
+}
+
+.event-date {
+  display: block;
+  font-size: 0.97em;
+  font-weight: 700;
+  color: var(--accent, #6EC6CA);
+  margin-bottom: 0.35em;
+}
+
+.event-title {
+  font-size: 1.22em;
+  font-weight: 810;
+  color: #b97813;
+  margin: 0;
+}
+
+.event-desc {
+  color: #754309;
+  margin: 0.38em 0 0.5em 0;
+  font-size: 1em;
+}
+
+.event-photo {
+  margin-top: 0.4em;
+  max-width: 140px;
+  max-height: 85px;
+  border-radius: 7px;
+  box-shadow: 0 0 5px #ffb34723;
+  border: 2px solid var(--accent, #6EC6CA);
+}
+
+.timeline-event.photo .event-dot {
+  background: #FFB347;
+}
+.timeline-event.milestone .event-dot {
+  background: #6EC6CA;
+}
+.timeline-event.memory .event-dot {
+  background: #F69082;
+}
+
+.timeline-empty {
+  text-align: center;
+  color: #bfa86a;
+  font-size: 1.03em;
+  margin: 3em auto;
+}
+
+@media (max-width: 600px) {
+  .timeline-content, .event-content {
+    min-width: 0;
+    padding: 0.7em 0.7em;
+  }
+  .timeline-vertical {
+    padding-left: 20px;
+  }
+  .event-dot {
+    left: -12px;
+    width: 13px;
+    height: 13px;
+  }
+  .timeline-line {
+    left: -7.5px;
+    width: 3px;
+  }
+}

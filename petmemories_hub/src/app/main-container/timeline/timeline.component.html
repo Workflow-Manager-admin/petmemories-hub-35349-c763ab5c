@@ -1,0 +1,28 @@
+<div class="timeline-container">
+  <div class="timeline-vertical">
+    <ng-container *ngFor="let item of timeline; let last = last">
+      <div class="timeline-event" [ngClass]="item.type">
+        <div class="event-dot"></div>
+        <div class="event-content">
+          <span class="event-date">{{ item.date | date:'longDate' }}</span>
+          <div class="event-details">
+            <div class="event-icon">
+              <span *ngIf="item.type == 'photo'">📸</span>
+              <span *ngIf="item.type == 'milestone'">⭐</span>
+              <span *ngIf="item.type == 'memory'">🧸</span>
+            </div>
+            <div>
+              <h3 class="event-title">{{ item.title }}</h3>
+              <p class="event-desc">{{ item.description }}</p>
+              <img *ngIf="item.photoUrl" [src]="item.photoUrl" alt="Event photo" class="event-photo" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!last" class="timeline-line"></div>
+    </ng-container>
+  </div>
+  <div class="timeline-empty" *ngIf="timeline.length === 0">
+    <p>No memories yet. Click "Add Memory" to start your pet's story!</p>
+  </div>
+</div>
