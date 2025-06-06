@@ -79,12 +79,14 @@
       </div>
       <!-- Memory Modal -->
       <div class="pmh-modal" *ngIf="memoryModalOpen" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:900;background:rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;">
-        <div style="background:#fff8e1;padding:1.5rem;border-radius:18px;width:98%;max-width:340px;box-shadow:0 2px 22px #bfa86a1b;">
+        <div style="background:#fff8e1;padding:1.5rem;border-radius:18px;width:98%;max-width:380px;box-shadow:0 2px 22px #bfa86a1b;">
           <h3>Add Memory</h3>
           <form (ngSubmit)="addMemory()" autocomplete="off" #memoryForm="ngForm">
             <input required type="text" [(ngModel)]="newMemory.title" name="title" placeholder="Memory Title" style="width:95%;margin-bottom:0.6rem;" /><br>
             <input required type="text" [(ngModel)]="newMemory.description" name="description" placeholder="Description" style="width:95%;margin-bottom:0.6rem;" /><br>
             <input required type="date" [(ngModel)]="newMemory.date" name="date" style="margin-bottom:0.5rem;"><br>
+            <input type="file" accept="image/*" (change)="handleMemoryPhotoInput($event)" style="margin-bottom:0.5rem;"><br>
+            <img *ngIf="newMemory.photoPreview" [src]="newMemory.photoPreview" alt="Memory photo preview" style="max-width:150px;max-height:90px;margin-bottom:0.8rem;border-radius:7px;border:2.5px solid #6ec6ca;"><br>
             <button type="submit" [disabled]="!newMemory.title || !newMemory.date">Add</button>
             <button type="button" (click)="closeModals()">Cancel</button>
           </form>
@@ -145,9 +147,18 @@
           <h2>Scrapbook</h2>
           <button (click)="openAddScrapbook()" style="float:right;margin-bottom:0.5em;">Add Page</button>
           <div *ngIf="scrapbookPages.length === 0" style="color:#bfa86a;padding:1.2em 0;">No scrapbook pages yet.</div>
-          <div *ngFor="let s of scrapbookPages" style="background:#fff;border-radius:12px;padding:1em;margin-bottom:1em;box-shadow:0 2px 8px #6ec6ca1b;">
+          <div *ngFor="let s of scrapbookPages; let i = index" style="background:#fff;border-radius:12px;padding:1em;margin-bottom:1em;box-shadow:0 2px 8px #6ec6ca1b;">
             <b>📒 {{ s.title }}</b>
-            <div style="margin:0.44em 0;">{{ s.content }}</div>
+            <div style="margin:0.44em 0;">
+              <span *ngIf="!s.editing">{{ s.content }}</span>
+              <textarea *ngIf="s.editing" [(ngModel)]="s.content" (blur)="stopEditingScrapbook(i)" rows="3" style="width:97%"></textarea>
+              <button *ngIf="!s.editing" (click)="editScrapbook(i)" style="margin-left:1em;font-size:0.9em;">Edit</button>
+              <button *ngIf="s.editing" (click)="stopEditingScrapbook(i)" style="margin-left:1em;font-size:0.9em;">Save</button>
+            </div>
+            <!-- Show related photos/memories (optional, for visual scrapbook feel) -->
+            <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:0.7em;" *ngIf="scrapbookPhotosForPage().length > 0">
+              <img *ngFor="let p of scrapbookPhotosForPage()" [src]="p.photoUrl" style="max-width:70px;max-height:48px;border-radius:6px;border:1.5px solid #bfa86a;">
+            </div>
           </div>
         </div>
         <div *ngSwitchCase="'share'" class="pmh-section-placeholder">

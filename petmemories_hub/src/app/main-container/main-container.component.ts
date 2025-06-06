@@ -34,7 +34,7 @@ export class MainContainerComponent {
   newMilestone: any = { title: '', description: '', date: this.dateStringToday() };
 
   memoryModalOpen = false;
-  newMemory: any = { title: '', description: '', date: this.dateStringToday() };
+  newMemory: any = { title: '', description: '', date: this.dateStringToday(), photoFile: null, photoPreview: '' };
 
   scrapbookModalOpen = false;
   newScrapbookPage: any = { title: '', content: '' };
@@ -86,7 +86,7 @@ export class MainContainerComponent {
   /** Opens the add-memory modal. */
   openAddMemoryDirect() {
     this.memoryModalOpen = true;
-    this.newMemory = { title: '', description: '', date: this.dateStringToday() };
+    this.newMemory = { title: '', description: '', date: this.dateStringToday(), photoFile: null, photoPreview: '' };
   }
 
   /** Opens the scrapbook add modal. */
@@ -144,10 +144,41 @@ export class MainContainerComponent {
     }
   }
 
+  /** Handle file input and base64 preview for memory photo (in Add Memory modal). */
+  handleMemoryPhotoInput(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files.length > 0) {
+      const file = input.files[0];
+      this.newMemory.photoFile = file;
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.newMemory.photoPreview = reader.result as string;
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
   /** Add memory entry. */
   addMemory() {
     if (this.newMemory.title && this.newMemory.date) {
-      this.memories.push({ ...this.newMemory });
+      // Create memory object and push to memories.
+      const memoryCopy: any = {
+        title: this.newMemory.title,
+        description: this.newMemory.description,
+        date: this.newMemory.date,
+        photoUrl: this.newMemory.photoPreview || '', // may be blank if no photo
+      };
+      this.memories.push(memoryCopy);
+
+      // If photo included in memory, also add to photos list.
+      if (this.newMemory.photoPreview) {
+        this.photos.push({
+          title: this.newMemory.title + ' (Memory Photo)',
+          photoUrl: this.newMemory.photoPreview,
+          date: this.newMemory.date,
+        });
+      }
+
       this.closeModals();
     }
   }
@@ -155,9 +186,31 @@ export class MainContainerComponent {
   /** Add scrapbook page. */
   addScrapbookPage() {
     if (this.newScrapbookPage.title && this.newScrapbookPage.content) {
-      this.scrapbookPages.push({ ...this.newScrapbookPage });
+      // Each page may also be extended for photo references later.
+      this.scrapbookPages.push({ ...this.newScrapbookPage, editing: false });
       this.closeModals();
     }
+  }
+
+  /** Allow editing scrapbooks (toggle edit mode for description/content) */
+  editScrapbook(index: number) {
+    this.scrapbookPages[index].editing = true;
+  }
+  stopEditingScrapbook(index: number) {
+    this.scrapbookPages[index].editing = false;
+  }
+
+  /** Return photos relevant for scrapbook page (demo: show all, or could be filtered in future) */
+  scrapbookPhotosForPage() {
+    // Demo: show all photos and all memory photos
+    return [
+      ...this.photos,
+      ...this.memories.filter(m => m.photoUrl).map(m => ({
+        title: m.title,
+        photoUrl: m.photoUrl,
+        date: m.date,
+      }))
+    ];
   }
 
   /** Add share link demo */
