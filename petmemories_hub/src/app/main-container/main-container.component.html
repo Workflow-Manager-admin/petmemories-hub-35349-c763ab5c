@@ -85,8 +85,13 @@
             <input required type="text" [(ngModel)]="newMemory.title" name="title" placeholder="Memory Title" style="width:95%;margin-bottom:0.6rem;" /><br>
             <input required type="text" [(ngModel)]="newMemory.description" name="description" placeholder="Description" style="width:95%;margin-bottom:0.6rem;" /><br>
             <input required type="date" [(ngModel)]="newMemory.date" name="date" style="margin-bottom:0.5rem;"><br>
-            <input type="file" accept="image/*" (change)="handleMemoryPhotoInput($event)" style="margin-bottom:0.5rem;"><br>
-            <img *ngIf="newMemory.photoPreview" [src]="newMemory.photoPreview" alt="Memory photo preview" style="max-width:150px;max-height:90px;margin-bottom:0.8rem;border-radius:7px;border:2.5px solid #6ec6ca;"><br>
+            <!-- Support multi-photo upload -->
+            <input type="file" accept="image/*" multiple (change)="handleMemoryPhotoInput($event)" style="margin-bottom:0.5rem;"><br>
+            <!-- Previews for multiple selected photos -->
+            <div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:0.8rem;">
+              <img *ngFor="let p of newMemory.photoPreviews" [src]="p" alt="Memory photo preview"
+                style="max-width:70px;max-height:55px;border-radius:7px;border:2.5px solid #6ec6ca;">
+            </div>
             <button type="submit" [disabled]="!newMemory.title || !newMemory.date">Add</button>
             <button type="button" (click)="closeModals()">Cancel</button>
           </form>
@@ -120,7 +125,7 @@
         </div>
       </div>
       <ng-container [ngSwitch]="activeSection">
-        <pmh-timeline *ngSwitchCase="'timeline'"></pmh-timeline>
+        <pmh-timeline *ngSwitchCase="'timeline'" [timeline]="composeTimeline()"></pmh-timeline>
         <div *ngSwitchCase="'photos'" class="pmh-section-placeholder">
           <h2>Photos</h2>
           <button (click)="openAddPhoto()" style="float:right;margin-bottom:0.5em;">Add Photo</button>

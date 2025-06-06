@@ -9,470 +9,6 @@ The "disableHostCheck" option will not be used because it is not supported by th
 Browser bundles     
 Initial chunk files  | Names            |  Raw size
 polyfills.js         | polyfills        |  90.20 kB | 
-main.js              | main             |  63.04 kB | 
-styles.css           | styles           |  95 bytes | 
-
-                     | Initial total    | 153.34 kB
-
-
-Server bundles      
-Initial chunk files  | Names            |  Raw size
-polyfills.server.mjs | polyfills.server | 572.91 kB | 
-chunk-DK27JTUP.mjs   | -                |  63.51 kB | 
-server.mjs           | server           |   1.39 kB | 
-main.server.mjs      | main.server      | 800 bytes | 
-
-Application bundle generation complete. [2.778 seconds]
-
-▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
-
-    src/app/app.component.ts:8:36:
-      8 │   imports: [MainContainerComponent, TimelineComponent],
-        ╵                                     ~~~~~~~~~~~~~~~~~
-
-
-Watch mode enabled. Watching for file changes...
-NOTE: Raw file sizes do not reflect development server per-request transformations.
-5:45:44 PM [vite] (client) Re-optimizing dependencies because vite config has changed
-  ➜  Local:   http://localhost:3000/
-  ➜  Network: http://172.17.0.2:3000/
-❯ Changes detected. Rebuilding...
-✔ Changes detected. Rebuilding...
-Application bundle generation failed. [0.865 seconds]
-
-▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
-
-    src/app/app.component.ts:8:36:
-      8 │   imports: [MainContainerComponent, TimelineComponent],
-        ╵                                     ~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'handleMemoryPhotoInput' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:88:58:
-      88 │ ...="image/*" (change)="handleMemoryPhotoInput($event)" style="mar...
-         ╵                         ~~~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-❯ Changes detected. Rebuilding...
-✔ Changes detected. Rebuilding...
-Application bundle generation failed. [0.698 seconds]
-
-▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
-
-    src/app/app.component.ts:8:36:
-      8 │   imports: [MainContainerComponent, TimelineComponent],
-        ╵                                     ~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'handleMemoryPhotoInput' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:88:58:
-      88 │ ...="image/*" (change)="handleMemoryPhotoInput($event)" style="mar...
-         ╵                         ~~~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'stopEditingScrapbook' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:154:74:
-      154 │ ...="s.content" (blur)="stopEditingScrapbook(i)" rows="3" style="...
-          ╵                         ~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'editScrapbook' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:155:50:
-      155 │ ...If="!s.editing" (click)="editScrapbook(i)" style="margin-left:...
-          ╵                             ~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'stopEditingScrapbook' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:156:49:
-      156 │ ..."s.editing" (click)="stopEditingScrapbook(i)" style="margin-le...
-          ╵                         ~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'scrapbookPhotosForPage' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:159:86:
-      159 │ ...;margin-top:0.7em;" *ngIf="scrapbookPhotosForPage(s).length > 0">
-          ╵                               ~~~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'scrapbookPhotosForPage' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:160:36:
-      160 │ ...mg *ngFor="let p of scrapbookPhotosForPage(s)" [src]="p.photoU...
-          ╵                        ~~~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-❯ Changes detected. Rebuilding...
-✔ Changes detected. Rebuilding...
-Application bundle generation failed. [0.644 seconds]
-
-▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
-
-    src/app/app.component.ts:8:36:
-      8 │   imports: [MainContainerComponent, TimelineComponent],
-        ╵                                     ~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'handleMemoryPhotoInput' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:88:58:
-      88 │ ...="image/*" (change)="handleMemoryPhotoInput($event)" style="mar...
-         ╵                         ~~~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'stopEditingScrapbook' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:154:74:
-      154 │ ...="s.content" (blur)="stopEditingScrapbook(i)" rows="3" style="...
-          ╵                         ~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'editScrapbook' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:155:50:
-      155 │ ...If="!s.editing" (click)="editScrapbook(i)" style="margin-left:...
-          ╵                             ~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'stopEditingScrapbook' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:156:49:
-      156 │ ..."s.editing" (click)="stopEditingScrapbook(i)" style="margin-le...
-          ╵                         ~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'scrapbookPhotosForPage' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:159:86:
-      159 │ ...;margin-top:0.7em;" *ngIf="scrapbookPhotosForPage(s).length > 0">
-          ╵                               ~~~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'scrapbookPhotosForPage' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:160:36:
-      160 │ ...mg *ngFor="let p of scrapbookPhotosForPage(s)" [src]="p.photoU...
-          ╵                        ~~~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-❯ Changes detected. Rebuilding...
-✔ Changes detected. Rebuilding...
-Application bundle generation failed. [0.544 seconds]
-
-▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
-
-    src/app/app.component.ts:8:36:
-      8 │   imports: [MainContainerComponent, TimelineComponent],
-        ╵                                     ~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'handleMemoryPhotoInput' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:88:58:
-      88 │ ...="image/*" (change)="handleMemoryPhotoInput($event)" style="mar...
-         ╵                         ~~~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'stopEditingScrapbook' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:154:74:
-      154 │ ...="s.content" (blur)="stopEditingScrapbook(i)" rows="3" style="...
-          ╵                         ~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'editScrapbook' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:155:50:
-      155 │ ...If="!s.editing" (click)="editScrapbook(i)" style="margin-left:...
-          ╵                             ~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'stopEditingScrapbook' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:156:49:
-      156 │ ..."s.editing" (click)="stopEditingScrapbook(i)" style="margin-le...
-          ╵                         ~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'scrapbookPhotosForPage' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:159:86:
-      159 │ ...;margin-top:0.7em;" *ngIf="scrapbookPhotosForPage(s).length > 0">
-          ╵                               ~~~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'scrapbookPhotosForPage' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:160:36:
-      160 │ ...mg *ngFor="let p of scrapbookPhotosForPage(s)" [src]="p.photoU...
-          ╵                        ~~~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-❯ Changes detected. Rebuilding...
-✔ Changes detected. Rebuilding...
-Application bundle generation failed. [0.532 seconds]
-
-▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
-
-    src/app/app.component.ts:8:36:
-      8 │   imports: [MainContainerComponent, TimelineComponent],
-        ╵                                     ~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'stopEditingScrapbook' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:154:74:
-      154 │ ...="s.content" (blur)="stopEditingScrapbook(i)" rows="3" style="...
-          ╵                         ~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'editScrapbook' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:155:50:
-      155 │ ...If="!s.editing" (click)="editScrapbook(i)" style="margin-left:...
-          ╵                             ~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'stopEditingScrapbook' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:156:49:
-      156 │ ..."s.editing" (click)="stopEditingScrapbook(i)" style="margin-le...
-          ╵                         ~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'scrapbookPhotosForPage' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:159:86:
-      159 │ ...;margin-top:0.7em;" *ngIf="scrapbookPhotosForPage(s).length > 0">
-          ╵                               ~~~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG9: Property 'scrapbookPhotosForPage' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:160:36:
-      160 │ ...mg *ngFor="let p of scrapbookPhotosForPage(s)" [src]="p.photoU...
-          ╵                        ~~~~~~~~~~~~~~~~~~~~~~
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-❯ Changes detected. Rebuilding...
-✔ Changes detected. Rebuilding...
-Browser bundles     
-Initial chunk files  | Names            |  Raw size
-polyfills.js         | polyfills        |  90.20 kB | 
-main.js              | main             |  71.32 kB | 
-styles.css           | styles           |  95 bytes | 
-
-                     | Initial total    | 161.61 kB
-
-
-Server bundles      
-Initial chunk files  | Names            |  Raw size
-polyfills.server.mjs | polyfills.server | 572.91 kB | 
-chunk-FMLN3M5Y.mjs   | -                |  71.78 kB | 
-server.mjs           | server           |   1.39 kB | 
-main.server.mjs      | main.server      | 800 bytes | 
-
-Application bundle generation complete. [0.607 seconds]
-
-▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
-
-    src/app/app.component.ts:8:36:
-      8 │   imports: [MainContainerComponent, TimelineComponent],
-        ╵                                     ~~~~~~~~~~~~~~~~~
-
-
-Page reload sent to client(s).
-❯ Changes detected. Rebuilding...
-✔ Changes detected. Rebuilding...
-Application bundle generation failed. [0.601 seconds]
-
-▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
-
-    src/app/app.component.ts:8:36:
-      8 │   imports: [MainContainerComponent, TimelineComponent],
-        ╵                                     ~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG4: Expected 0 arguments, but got 1. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:159:109:
-      159 │ ...;margin-top:0.7em;" *ngIf="scrapbookPhotosForPage(s).length > 0">
-          ╵                                                      ^
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-✘ [ERROR] NG4: Expected 0 arguments, but got 1. [plugin angular-compiler]
-
-    src/app/main-container/main-container.component.html:160:59:
-      160 │ ...et p of scrapbookPhotosForPage(s)" [src]="p.photoUrl" style="m...
-          ╵                                   ^
-
-  Error occurs in the template of component MainContainerComponent.
-
-    src/app/main-container/main-container.component.ts:13:15:
-      13 │   templateUrl: './main-container.component.html',
-         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-❯ Changes detected. Rebuilding...
-✔ Changes detected. Rebuilding...
-Browser bundles     
-Initial chunk files  | Names            |  Raw size
-polyfills.js         | polyfills        |  90.20 kB | 
 main.js              | main             |  71.24 kB | 
 styles.css           | styles           |  95 bytes | 
 
@@ -486,7 +22,33 @@ chunk-7LQSLPUO.mjs   | -                |  71.71 kB |
 server.mjs           | server           |   1.39 kB | 
 main.server.mjs      | main.server      | 800 bytes | 
 
-Application bundle generation complete. [0.555 seconds]
+Application bundle generation complete. [2.975 seconds]
+
+▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:36:
+      8 │   imports: [MainContainerComponent, TimelineComponent],
+        ╵                                     ~~~~~~~~~~~~~~~~~
+
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://172.17.0.2:3000/
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |  71.31 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+chunk-BUURR44U.mjs  | -           |  71.78 kB | 
+server.mjs          | server      |   1.39 kB | 
+main.server.mjs     | main.server | 800 bytes | 
+
+Application bundle generation complete. [0.791 seconds]
 
 ▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
 
@@ -496,3 +58,1955 @@ Application bundle generation complete. [0.555 seconds]
 
 
 Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |  71.38 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+chunk-ZP72HZDJ.mjs  | -           |  71.85 kB | 
+server.mjs          | server      |   1.39 kB | 
+main.server.mjs     | main.server | 800 bytes | 
+
+Application bundle generation complete. [0.704 seconds]
+
+▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:36:
+      8 │   imports: [MainContainerComponent, TimelineComponent],
+        ╵                                     ~~~~~~~~~~~~~~~~~
+
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |  71.70 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+chunk-PC4ACTU5.mjs  | -           |  72.16 kB | 
+server.mjs          | server      |   1.39 kB | 
+main.server.mjs     | main.server | 800 bytes | 
+
+Application bundle generation complete. [0.551 seconds]
+
+▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:36:
+      8 │   imports: [MainContainerComponent, TimelineComponent],
+        ╵                                     ~~~~~~~~~~~~~~~~~
+
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |  71.77 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+chunk-H5GELECL.mjs  | -           |  72.23 kB | 
+server.mjs          | server      |   1.39 kB | 
+main.server.mjs     | main.server | 800 bytes | 
+
+Application bundle generation complete. [0.449 seconds]
+
+▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:36:
+      8 │   imports: [MainContainerComponent, TimelineComponent],
+        ╵                                     ~~~~~~~~~~~~~~~~~
+
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |  71.87 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+chunk-F4GE33ZF.mjs  | -           |  72.33 kB | 
+server.mjs          | server      |   1.39 kB | 
+main.server.mjs     | main.server | 800 bytes | 
+
+Application bundle generation complete. [0.533 seconds]
+
+▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:36:
+      8 │   imports: [MainContainerComponent, TimelineComponent],
+        ╵                                     ~~~~~~~~~~~~~~~~~
+
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |  71.87 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+chunk-M7Z7RUS6.mjs  | -           |  72.33 kB | 
+server.mjs          | server      |   1.39 kB | 
+main.server.mjs     | main.server | 800 bytes | 
+
+Application bundle generation complete. [0.428 seconds]
+
+▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:36:
+      8 │   imports: [MainContainerComponent, TimelineComponent],
+        ╵                                     ~~~~~~~~~~~~~~~~~
+
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |  71.98 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+chunk-A6HP7SBS.mjs  | -           |  72.45 kB | 
+server.mjs          | server      |   1.39 kB | 
+main.server.mjs     | main.server | 800 bytes | 
+
+Application bundle generation complete. [0.440 seconds]
+
+▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:36:
+      8 │   imports: [MainContainerComponent, TimelineComponent],
+        ╵                                     ~~~~~~~~~~~~~~~~~
+
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |  71.23 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+chunk-L52NCCPI.mjs  | -           |  71.69 kB | 
+server.mjs          | server      |   1.39 kB | 
+main.server.mjs     | main.server | 800 bytes | 
+
+Application bundle generation complete. [0.295 seconds]
+
+▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:36:
+      8 │   imports: [MainContainerComponent, TimelineComponent],
+        ╵                                     ~~~~~~~~~~~~~~~~~
+
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.523 seconds]
+
+▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:36:
+      8 │   imports: [MainContainerComponent, TimelineComponent],
+        ╵                                     ~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG9: Property 'composeTimeline' does not exist on type 'MainContainerComponent'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:128:61:
+      128 │ ...hCase="'timeline'" [timeline]="composeTimeline()"></pmh-timeline>
+          ╵                                   ~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.542 seconds]
+
+▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:36:
+      8 │   imports: [MainContainerComponent, TimelineComponent],
+        ╵                                     ~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:4:2:
+      4 │   composeTimeline() {
+        ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'composeTimeline'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:4:2:
+      4 │   composeTimeline() {
+        ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'composeTimeline'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:4:2:
+      4 │   composeTimeline() {
+        ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'composeTimeline'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:4:2:
+      4 │   composeTimeline() {
+        ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:4:17:
+      4 │   composeTimeline() {
+        ╵                  ^
+
+
+✘ [ERROR] TS1141: String literal expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:4:17:
+      4 │   composeTimeline() {
+        ╵                  ~~~~
+
+
+✘ [ERROR] TS1005: '=>' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:4:20:
+      4 │   composeTimeline() {
+        ╵                     ^
+
+
+✘ [ERROR] Expected string but found "("
+
+    src/app/main-container/main-container.component.ts:6:29:
+      6 │    */ composeTimeline } from () => {
+        ╵                              ^
+
+
+✘ [ERROR] TS1128: Declaration or statement expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:24:0:
+      24 │ } from '@angular/core';
+         ╵ ^
+
+
+✘ [ERROR] TS1434: Unexpected keyword or identifier. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:24:2:
+      24 │ } from '@angular/core';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'from'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:24:2:
+      24 │ } from '@angular/core';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:28:2:
+      28 │   composeTimeline() {
+         ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'composeTimeline'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:28:2:
+      28 │   composeTimeline() {
+         ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:28:17:
+      28 │   composeTimeline() {
+         ╵                  ^
+
+
+✘ [ERROR] TS1141: String literal expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:28:17:
+      28 │   composeTimeline() {
+         ╵                  ~~~~
+
+
+✘ [ERROR] TS1005: '=>' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:28:20:
+      28 │   composeTimeline() {
+         ╵                     ^
+
+
+✘ [ERROR] TS1128: Declaration or statement expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:48:0:
+      48 │ } from '@angular/common';
+         ╵ ^
+
+
+✘ [ERROR] TS1434: Unexpected keyword or identifier. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:48:2:
+      48 │ } from '@angular/common';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'from'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:48:2:
+      48 │ } from '@angular/common';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:52:2:
+      52 │   composeTimeline() {
+         ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'composeTimeline'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:52:2:
+      52 │   composeTimeline() {
+         ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:52:17:
+      52 │   composeTimeline() {
+         ╵                  ^
+
+
+✘ [ERROR] TS1141: String literal expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:52:17:
+      52 │   composeTimeline() {
+         ╵                  ~~~~
+
+
+✘ [ERROR] TS1005: '=>' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:52:20:
+      52 │   composeTimeline() {
+         ╵                     ^
+
+
+✘ [ERROR] TS1128: Declaration or statement expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:72:0:
+      72 │ } from '@angular/forms';
+         ╵ ^
+
+
+✘ [ERROR] TS1434: Unexpected keyword or identifier. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:72:2:
+      72 │ } from '@angular/forms';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'from'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:72:2:
+      72 │ } from '@angular/forms';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:76:2:
+      76 │   composeTimeline() {
+         ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'composeTimeline'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:76:2:
+      76 │   composeTimeline() {
+         ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:76:17:
+      76 │   composeTimeline() {
+         ╵                  ^
+
+
+✘ [ERROR] TS1141: String literal expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:76:17:
+      76 │   composeTimeline() {
+         ╵                  ~~~~
+
+
+✘ [ERROR] TS1005: '=>' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:76:20:
+      76 │   composeTimeline() {
+         ╵                     ^
+
+
+✘ [ERROR] TS1128: Declaration or statement expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:96:0:
+      96 │ } from './timeline/timeline.component';
+         ╵ ^
+
+
+✘ [ERROR] TS1434: Unexpected keyword or identifier. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:96:2:
+      96 │ } from './timeline/timeline.component';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'from'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:96:2:
+      96 │ } from './timeline/timeline.component';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:149:2:
+      149 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:175:2:
+      175 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:202:2:
+      202 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:228:2:
+      228 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:254:2:
+      254 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:282:20:
+      282 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:316:20:
+      316 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:341:20:
+      341 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:365:20:
+      365 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:398:20:
+      398 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:426:2:
+      426 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:450:20:
+      450 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:478:2:
+      478 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:502:20:
+      502 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:530:2:
+      530 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:554:20:
+      554 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:582:2:
+      582 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:606:20:
+      606 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:634:2:
+      634 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:658:20:
+      658 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:694:20:
+      694 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:718:20:
+      718 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:752:20:
+      752 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:777:20:
+      777 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:801:20:
+      801 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:858:20:
+      858 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:882:20:
+      882 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:910:2:
+      910 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:935:20:
+      935 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:959:20:
+      959 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:997:20:
+      997 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1021:20:
+      1021 │   composeTimeline() {
+           ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1046:20:
+      1046 │   composeTimeline() {
+           ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1070:20:
+      1070 │   composeTimeline() {
+           ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1096:20:
+      1096 │   composeTimeline() {
+           ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1120:20:
+      1120 │   composeTimeline() {
+           ╵                     ^
+
+
+✘ [ERROR] TS7030: Not all code paths return a value. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1143:2:
+      1143 │   addMemory() {
+           ╵   ~~~~~~~~~
+
+
+✘ [ERROR] TS2349: This expression is not callable.
+  Type 'Number' has no call signatures. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1180:8:
+      1180 │         this.photos.push({
+           ╵         ~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: '}' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1184:2:
+      1184 │   composeTimeline() {
+           ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2592: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1447:58:
+      1447 │ ...      title: m.title + (m.photoUrls.length > 1 ? ` (${i + 1  /**
+           ╵                                                        ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1447:59:
+      1447 │ ...      title: m.title + (m.photoUrls.length > 1 ? ` (${i + 1  /**
+           ╵                                                         ^
+
+
+✘ [ERROR] TS2365: Operator '+' cannot be applied to types '{ i: number; }' and 'number'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1447:59:
+      1447 │ ...      title: m.title + (m.photoUrls.length > 1 ? ` (${i + 1  /**
+           ╵                                                         ~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1447:62:
+      1447 │ ...      title: m.title + (m.photoUrls.length > 1 ? ` (${i + 1  /**
+           ╵                                                            ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1450:2:
+      1450 │   composeTimeline() {
+           ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1450:20:
+      1450 │   composeTimeline() {
+           ╵                     ^
+
+
+✘ [ERROR] TS1005: ':' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1452:10:
+      1452 │     const memoryEvents = this.memories.flatMap((m: any) =>
+           ╵           ~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'memoryEvents'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1452:10:
+      1452 │     const memoryEvents = this.memories.flatMap((m: any) =>
+           ╵           ~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1456:5:
+      1456 │     );
+           ╵      ^
+
+
+✘ [ERROR] TS1005: ':' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1458:10:
+      1458 │     const milestoneEvents = this.milestones.map((m: any) => ({
+           ╵           ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'milestoneEvents'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1458:10:
+      1458 │     const milestoneEvents = this.milestones.map((m: any) => ({
+           ╵           ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1460:7:
+      1460 │     }));
+           ╵        ^
+
+
+✘ [ERROR] TS1005: ':' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1462:10:
+      1462 │     const photoEvents = this.photos.map((p: any) => ({
+           ╵           ~~~~~~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'photoEvents'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1462:10:
+      1462 │     const photoEvents = this.photos.map((p: any) => ({
+           ╵           ~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1464:7:
+      1464 │     }));
+           ╵        ^
+
+
+✘ [ERROR] TS1005: ':' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1467:11:
+      1467 │     return [...memoryEvents, ...milestoneEvents, ...photoEvents]
+           ╵            ^
+
+
+✘ [ERROR] TS2304: Cannot find name 'memoryEvents'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1467:15:
+      1467 │     return [...memoryEvents, ...milestoneEvents, ...photoEvents]
+           ╵                ~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'milestoneEvents'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1467:32:
+      1467 │     return [...memoryEvents, ...milestoneEvents, ...photoEvents]
+           ╵                                 ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'photoEvents'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1467:52:
+      1467 │     return [...memoryEvents, ...milestoneEvents, ...photoEvents]
+           ╵                                                     ~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1468:81:
+      1468 │ ...y, b: any) => (b.date > a.date ? 1 : b.date < a.date ? -1 : 0));
+           ╵                                                                   ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1470:0:
+      1470 │ })` : ''),
+           ╵ ^
+
+
+✘ [ERROR] TS1443: Module declaration names may only use ' or " quoted strings. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1470:2:
+      1470 │ })` : ''),
+           ╵   ~~~~~~~~
+
+
+✘ [ERROR] TS1109: Expression expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:3:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵    ^
+
+
+✘ [ERROR] TS2304: Cannot find name 'Combine'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:5:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵      ~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:13:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵              ~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'all'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:13:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵              ~~~
+
+
+✘ [ERROR] TS2663: Cannot find name 'memories'. Did you mean the instance member 'this.memories'? [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:17:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵                  ~~~~~~~~
+
+
+✘ [ERROR] TS2695: Left side of comma operator is unused and has no side effects. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:17:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵                  ~~~~~~~~
+
+
+✘ [ERROR] TS2695: Left side of comma operator is unused and has no side effects. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:17:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵                  ~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2663: Cannot find name 'milestones'. Did you mean the instance member 'this.milestones'? [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:27:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵                            ~~~~~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'and'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:39:
+      1528 │ ...ne all memories, milestones, and photo events in date order f...
+           ╵                                 ~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:43:
+      1528 │ ...l memories, milestones, and photo events in date order for th...
+           ╵                                ~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'photo'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:43:
+      1528 │ ...l memories, milestones, and photo events in date order for th...
+           ╵                                ~~~~~
+
+
+✘ [ERROR] TS2552: Cannot find name 'events'. Did you mean 'event'? [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:49:
+      1528 │ ...ries, milestones, and photo events in date order for the time...
+           ╵                                ~~~~~~
+
+  'event' is declared here.
+
+    node_modules/typescript/lib/lib.dom.d.ts:27951:12:
+      27951 │ declare var event: Event | undefined;
+            ╵             ~~~~~
+
+
+✘ [ERROR] TS2552: Cannot find name 'date'. Did you mean 'Date'? [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:59:
+      1528 │ ...es, milestones, and photo events in date order for the timeline.
+           ╵                                        ~~~~
+
+  'Date' is declared here.
+
+    node_modules/typescript/lib/lib.es5.d.ts:961:12:
+      961 │ declare var Date: DateConstructor;
+          ╵             ~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:64:
+      1528 │ ...es, milestones, and photo events in date order for the timeline.
+           ╵                                             ~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'order'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:64:
+      1528 │ ...es, milestones, and photo events in date order for the timeline.
+           ╵                                             ~~~~~
+
+
+✘ [ERROR] TS1005: '(' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:74:
+      1528 │ ...es, milestones, and photo events in date order for the timeline.
+           ╵                                                       ~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'the'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:74:
+      1528 │ ...es, milestones, and photo events in date order for the timeline.
+           ╵                                                       ~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:78:
+      1528 │ ...es, milestones, and photo events in date order for the timeline.
+           ╵                                                           ~~~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'timeline'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:78:
+      1528 │ ...es, milestones, and photo events in date order for the timeline.
+           ╵                                                           ~~~~~~~~
+
+
+✘ [ERROR] TS1003: Identifier expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1529:3:
+      1529 │    */
+           ╵    ^
+
+
+✘ [ERROR] TS1161: Unterminated regular expression literal. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1529:4:
+      1529 │    */
+           ╵     ^
+
+
+✘ [ERROR] TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1529:4:
+      1529 │    */
+           ╵     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1530:2:
+      1530 │   composeTimeline() {
+           ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ')' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1530:20:
+      1530 │   composeTimeline() {
+           ╵                     ^
+
+
+✘ [ERROR] TS1160: Unterminated template literal. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1625:0:
+      1625 │ 
+           ╵ ^
+
+
+✘ [ERROR] Expected string but found "("
+
+    src/app/main-container/main-container.component.ts:6:29:
+      6 │    */ composeTimeline } from () => {
+        ╵                              ^
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.218 seconds]
+
+✘ [ERROR] TS-992012: Component imports must be standalone components, directives, pipes, or must be NgModules. [plugin angular-compiler]
+
+    src/app/app.component.ts:7:12:
+      7 │   imports: [MainContainerComponent],
+        ╵             ~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:4:2:
+      4 │   composeTimeline() {
+        ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'composeTimeline'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:4:2:
+      4 │   composeTimeline() {
+        ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'composeTimeline'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:4:2:
+      4 │   composeTimeline() {
+        ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'composeTimeline'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:4:2:
+      4 │   composeTimeline() {
+        ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:4:17:
+      4 │   composeTimeline() {
+        ╵                  ^
+
+
+✘ [ERROR] TS1141: String literal expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:4:17:
+      4 │   composeTimeline() {
+        ╵                  ~~~~
+
+
+✘ [ERROR] TS1005: '=>' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:4:20:
+      4 │   composeTimeline() {
+        ╵                     ^
+
+
+✘ [ERROR] Expected string but found "("
+
+    src/app/main-container/main-container.component.ts:6:29:
+      6 │    */ composeTimeline } from () => {
+        ╵                              ^
+
+
+✘ [ERROR] TS1128: Declaration or statement expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:24:0:
+      24 │ } from '@angular/core';
+         ╵ ^
+
+
+✘ [ERROR] TS1434: Unexpected keyword or identifier. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:24:2:
+      24 │ } from '@angular/core';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'from'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:24:2:
+      24 │ } from '@angular/core';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:28:2:
+      28 │   composeTimeline() {
+         ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'composeTimeline'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:28:2:
+      28 │   composeTimeline() {
+         ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:28:17:
+      28 │   composeTimeline() {
+         ╵                  ^
+
+
+✘ [ERROR] TS1141: String literal expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:28:17:
+      28 │   composeTimeline() {
+         ╵                  ~~~~
+
+
+✘ [ERROR] TS1005: '=>' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:28:20:
+      28 │   composeTimeline() {
+         ╵                     ^
+
+
+✘ [ERROR] TS1128: Declaration or statement expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:48:0:
+      48 │ } from '@angular/common';
+         ╵ ^
+
+
+✘ [ERROR] TS1434: Unexpected keyword or identifier. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:48:2:
+      48 │ } from '@angular/common';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'from'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:48:2:
+      48 │ } from '@angular/common';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:52:2:
+      52 │   composeTimeline() {
+         ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'composeTimeline'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:52:2:
+      52 │   composeTimeline() {
+         ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:52:17:
+      52 │   composeTimeline() {
+         ╵                  ^
+
+
+✘ [ERROR] TS1141: String literal expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:52:17:
+      52 │   composeTimeline() {
+         ╵                  ~~~~
+
+
+✘ [ERROR] TS1005: '=>' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:52:20:
+      52 │   composeTimeline() {
+         ╵                     ^
+
+
+✘ [ERROR] TS1128: Declaration or statement expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:72:0:
+      72 │ } from '@angular/forms';
+         ╵ ^
+
+
+✘ [ERROR] TS1434: Unexpected keyword or identifier. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:72:2:
+      72 │ } from '@angular/forms';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'from'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:72:2:
+      72 │ } from '@angular/forms';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:76:2:
+      76 │   composeTimeline() {
+         ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'composeTimeline'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:76:2:
+      76 │   composeTimeline() {
+         ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:76:17:
+      76 │   composeTimeline() {
+         ╵                  ^
+
+
+✘ [ERROR] TS1141: String literal expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:76:17:
+      76 │   composeTimeline() {
+         ╵                  ~~~~
+
+
+✘ [ERROR] TS1005: '=>' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:76:20:
+      76 │   composeTimeline() {
+         ╵                     ^
+
+
+✘ [ERROR] TS1128: Declaration or statement expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:96:0:
+      96 │ } from './timeline/timeline.component';
+         ╵ ^
+
+
+✘ [ERROR] TS1434: Unexpected keyword or identifier. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:96:2:
+      96 │ } from './timeline/timeline.component';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'from'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:96:2:
+      96 │ } from './timeline/timeline.component';
+         ╵   ~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:149:2:
+      149 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:175:2:
+      175 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:202:2:
+      202 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:228:2:
+      228 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:254:2:
+      254 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:282:20:
+      282 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:316:20:
+      316 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:341:20:
+      341 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:365:20:
+      365 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:398:20:
+      398 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:426:2:
+      426 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:450:20:
+      450 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:478:2:
+      478 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:502:20:
+      502 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:530:2:
+      530 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:554:20:
+      554 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:582:2:
+      582 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:606:20:
+      606 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:634:2:
+      634 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:658:20:
+      658 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:694:20:
+      694 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:718:20:
+      718 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:752:20:
+      752 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:777:20:
+      777 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:801:20:
+      801 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:858:20:
+      858 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:882:20:
+      882 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:910:2:
+      910 │   composeTimeline() {
+          ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:935:20:
+      935 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:959:20:
+      959 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:997:20:
+      997 │   composeTimeline() {
+          ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1021:20:
+      1021 │   composeTimeline() {
+           ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1046:20:
+      1046 │   composeTimeline() {
+           ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1070:20:
+      1070 │   composeTimeline() {
+           ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1096:20:
+      1096 │   composeTimeline() {
+           ╵                     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1120:20:
+      1120 │   composeTimeline() {
+           ╵                     ^
+
+
+✘ [ERROR] TS7030: Not all code paths return a value. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1143:2:
+      1143 │   addMemory() {
+           ╵   ~~~~~~~~~
+
+
+✘ [ERROR] TS2349: This expression is not callable.
+  Type 'Number' has no call signatures. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1180:8:
+      1180 │         this.photos.push({
+           ╵         ~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: '}' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1184:2:
+      1184 │   composeTimeline() {
+           ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2592: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1447:58:
+      1447 │ ...      title: m.title + (m.photoUrls.length > 1 ? ` (${i + 1  /**
+           ╵                                                        ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1447:59:
+      1447 │ ...      title: m.title + (m.photoUrls.length > 1 ? ` (${i + 1  /**
+           ╵                                                         ^
+
+
+✘ [ERROR] TS2365: Operator '+' cannot be applied to types '{ i: number; }' and 'number'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1447:59:
+      1447 │ ...      title: m.title + (m.photoUrls.length > 1 ? ` (${i + 1  /**
+           ╵                                                         ~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1447:62:
+      1447 │ ...      title: m.title + (m.photoUrls.length > 1 ? ` (${i + 1  /**
+           ╵                                                            ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1450:2:
+      1450 │   composeTimeline() {
+           ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1450:20:
+      1450 │   composeTimeline() {
+           ╵                     ^
+
+
+✘ [ERROR] TS1005: ':' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1452:10:
+      1452 │     const memoryEvents = this.memories.flatMap((m: any) =>
+           ╵           ~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'memoryEvents'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1452:10:
+      1452 │     const memoryEvents = this.memories.flatMap((m: any) =>
+           ╵           ~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1456:5:
+      1456 │     );
+           ╵      ^
+
+
+✘ [ERROR] TS1005: ':' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1458:10:
+      1458 │     const milestoneEvents = this.milestones.map((m: any) => ({
+           ╵           ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'milestoneEvents'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1458:10:
+      1458 │     const milestoneEvents = this.milestones.map((m: any) => ({
+           ╵           ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1460:7:
+      1460 │     }));
+           ╵        ^
+
+
+✘ [ERROR] TS1005: ':' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1462:10:
+      1462 │     const photoEvents = this.photos.map((p: any) => ({
+           ╵           ~~~~~~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'photoEvents'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1462:10:
+      1462 │     const photoEvents = this.photos.map((p: any) => ({
+           ╵           ~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1464:7:
+      1464 │     }));
+           ╵        ^
+
+
+✘ [ERROR] TS1005: ':' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1467:11:
+      1467 │     return [...memoryEvents, ...milestoneEvents, ...photoEvents]
+           ╵            ^
+
+
+✘ [ERROR] TS2304: Cannot find name 'memoryEvents'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1467:15:
+      1467 │     return [...memoryEvents, ...milestoneEvents, ...photoEvents]
+           ╵                ~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'milestoneEvents'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1467:32:
+      1467 │     return [...memoryEvents, ...milestoneEvents, ...photoEvents]
+           ╵                                 ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'photoEvents'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1467:52:
+      1467 │     return [...memoryEvents, ...milestoneEvents, ...photoEvents]
+           ╵                                                     ~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1468:81:
+      1468 │ ...y, b: any) => (b.date > a.date ? 1 : b.date < a.date ? -1 : 0));
+           ╵                                                                   ^
+
+
+✘ [ERROR] TS1005: ',' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1470:0:
+      1470 │ })` : ''),
+           ╵ ^
+
+
+✘ [ERROR] TS1443: Module declaration names may only use ' or " quoted strings. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1470:2:
+      1470 │ })` : ''),
+           ╵   ~~~~~~~~
+
+
+✘ [ERROR] TS1109: Expression expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:3:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵    ^
+
+
+✘ [ERROR] TS2304: Cannot find name 'Combine'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:5:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵      ~~~~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:13:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵              ~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'all'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:13:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵              ~~~
+
+
+✘ [ERROR] TS2663: Cannot find name 'memories'. Did you mean the instance member 'this.memories'? [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:17:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵                  ~~~~~~~~
+
+
+✘ [ERROR] TS2695: Left side of comma operator is unused and has no side effects. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:17:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵                  ~~~~~~~~
+
+
+✘ [ERROR] TS2695: Left side of comma operator is unused and has no side effects. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:17:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵                  ~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2663: Cannot find name 'milestones'. Did you mean the instance member 'this.milestones'? [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:27:
+      1528 │    * Combine all memories, milestones, and photo events in date ...
+           ╵                            ~~~~~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'and'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:39:
+      1528 │ ...ne all memories, milestones, and photo events in date order f...
+           ╵                                 ~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:43:
+      1528 │ ...l memories, milestones, and photo events in date order for th...
+           ╵                                ~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'photo'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:43:
+      1528 │ ...l memories, milestones, and photo events in date order for th...
+           ╵                                ~~~~~
+
+
+✘ [ERROR] TS2552: Cannot find name 'events'. Did you mean 'event'? [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:49:
+      1528 │ ...ries, milestones, and photo events in date order for the time...
+           ╵                                ~~~~~~
+
+  'event' is declared here.
+
+    node_modules/typescript/lib/lib.dom.d.ts:27951:12:
+      27951 │ declare var event: Event | undefined;
+            ╵             ~~~~~
+
+
+✘ [ERROR] TS2552: Cannot find name 'date'. Did you mean 'Date'? [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:59:
+      1528 │ ...es, milestones, and photo events in date order for the timeline.
+           ╵                                        ~~~~
+
+  'Date' is declared here.
+
+    node_modules/typescript/lib/lib.es5.d.ts:961:12:
+      961 │ declare var Date: DateConstructor;
+          ╵             ~~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:64:
+      1528 │ ...es, milestones, and photo events in date order for the timeline.
+           ╵                                             ~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'order'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:64:
+      1528 │ ...es, milestones, and photo events in date order for the timeline.
+           ╵                                             ~~~~~
+
+
+✘ [ERROR] TS1005: '(' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:74:
+      1528 │ ...es, milestones, and photo events in date order for the timeline.
+           ╵                                                       ~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'the'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:74:
+      1528 │ ...es, milestones, and photo events in date order for the timeline.
+           ╵                                                       ~~~
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:78:
+      1528 │ ...es, milestones, and photo events in date order for the timeline.
+           ╵                                                           ~~~~~~~~
+
+
+✘ [ERROR] TS2304: Cannot find name 'timeline'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1528:78:
+      1528 │ ...es, milestones, and photo events in date order for the timeline.
+           ╵                                                           ~~~~~~~~
+
+
+✘ [ERROR] TS1003: Identifier expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1529:3:
+      1529 │    */
+           ╵    ^
+
+
+✘ [ERROR] TS1161: Unterminated regular expression literal. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1529:4:
+      1529 │    */
+           ╵     ^
+
+
+✘ [ERROR] TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1529:4:
+      1529 │    */
+           ╵     ^
+
+
+✘ [ERROR] TS1005: ';' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1530:2:
+      1530 │   composeTimeline() {
+           ╵   ~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS1005: ')' expected. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1530:20:
+      1530 │   composeTimeline() {
+           ╵                     ^
+
+
+✘ [ERROR] TS1160: Unterminated template literal. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.ts:1625:0:
+      1625 │ 
+           ╵ ^
+
+
+✘ [ERROR] Expected string but found "("
+
+    src/app/main-container/main-container.component.ts:6:29:
+      6 │    */ composeTimeline } from () => {
+        ╵                              ^
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.620 seconds]
+
+✘ [ERROR] TS-992012: Component imports must be standalone components, directives, pipes, or must be NgModules. [plugin angular-compiler]
+
+    src/app/app.component.ts:7:12:
+      7 │   imports: [MainContainerComponent],
+        ╵             ~~~~~~~~~~~~~~~~~~~~~~
+
+

@@ -34,7 +34,8 @@ export class MainContainerComponent {
   newMilestone: any = { title: '', description: '', date: this.dateStringToday() };
 
   memoryModalOpen = false;
-  newMemory: any = { title: '', description: '', date: this.dateStringToday(), photoFile: null, photoPreview: '' };
+  // newMemory supports multiple photos (array of files and previews)
+  newMemory: any = { title: '', description: '', date: this.dateStringToday(), photoFiles: [], photoPreviews: [] };
 
   scrapbookModalOpen = false;
   newScrapbookPage: any = { title: '', content: '' };
@@ -86,7 +87,7 @@ export class MainContainerComponent {
   /** Opens the add-memory modal. */
   openAddMemoryDirect() {
     this.memoryModalOpen = true;
-    this.newMemory = { title: '', description: '', date: this.dateStringToday(), photoFile: null, photoPreview: '' };
+    this.newMemory = { title: '', description: '', date: this.dateStringToday(), photoFiles: [], photoPreviews: [] };
   }
 
   /** Opens the scrapbook add modal. */
@@ -108,6 +109,11 @@ export class MainContainerComponent {
     this.memoryModalOpen = false;
     this.scrapbookModalOpen = false;
     this.shareModalOpen = false;
+    // Reset newMemory state for multi-photo fields
+    if (this.newMemory) {
+      this.newMemory.photoFiles = [];
+      this.newMemory.photoPreviews = [];
+    }
   }
 
   /** Handle file input and base64 preview for photos. */
@@ -144,40 +150,50 @@ export class MainContainerComponent {
     }
   }
 
-  /** Handle file input and base64 preview for memory photo (in Add Memory modal). */
+  /** Handle file input and base64 previews for memory photo (in Add Memory modal). Supports multiple photos. */
   handleMemoryPhotoInput(event: Event) {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files.length > 0) {
-      const file = input.files[0];
-      this.newMemory.photoFile = file;
-      const reader = new FileReader();
-      reader.onload = () => {
-        this.newMemory.photoPreview = reader.result as string;
-      };
-      reader.readAsDataURL(file);
+      const files = Array.from(input.files);
+      this.newMemory.photoFiles = files;
+      this.newMemory.photoPreviews = [];
+      files.forEach((file: File) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          // Only push if not already present
+          if (!this.newMemory.photoPreviews.includes(reader.result as string)) {
+            this.newMemory.photoPreviews.push(reader.result as string);
+          }
+        };
+        reader.readAsDataURL(file);
+      });
+    } else {
+      this.newMemory.photoFiles = [];
+      this.newMemory.photoPreviews = [];
     }
   }
 
   /** Add memory entry. */
   addMemory() {
     if (this.newMemory.title && this.newMemory.date) {
-      // Create memory object and push to memories.
+      // Prepare memory with associated photo URLs array (may be empty).
+      const photoUrls = Array.isArray(this.newMemory.photoPreviews) ? this.newMemory.photoPreviews.slice() : [];
       const memoryCopy: any = {
         title: this.newMemory.title,
         description: this.newMemory.description,
         date: this.newMemory.date,
-        photoUrl: this.newMemory.photoPreview || '', // may be blank if no photo
+        photoUrls: photoUrls,
       };
       this.memories.push(memoryCopy);
 
-      // If photo included in memory, also add to photos list.
-      if (this.newMemory.photoPreview) {
+      // Add each photo from this memory to the Photos section, referencing by memory.
+      photoUrls.forEach((photoUrl: string, i: number) => {
         this.photos.push({
-          title: this.newMemory.title + ' (Memory Photo)',
-          photoUrl: this.newMemory.photoPreview,
+          title: this.newMemory.title + (photoUrls.length > 1 ? ` (Memory Photo ${i+1})` : ' (Memory Photo)'),
+          photoUrl,
           date: this.newMemory.date,
         });
-      }
+      });
 
       this.closeModals();
     }
@@ -202,14 +218,18 @@ export class MainContainerComponent {
 
   /** Return photos relevant for scrapbook page (demo: show all, or could be filtered in future) */
   scrapbookPhotosForPage() {
-    // Demo: show all photos and all memory photos
+    // Demo: show all photos and all memory photos (now supports multiple per memory)
     return [
       ...this.photos,
-      ...this.memories.filter(m => m.photoUrl).map(m => ({
-        title: m.title,
-        photoUrl: m.photoUrl,
-        date: m.date,
-      }))
+      ...this.memories
+        .filter(m => m.photoUrls && m.photoUrls.length > 0)
+        .flatMap(m =>
+          m.photoUrls.map((url: string, i: number) => ({
+            title: m.title + (m.photoUrls.length > 1 ? ` (${i + 1})` : ''),
+            photoUrl: url,
+            date: m.date,
+          }))
+        ),
     ];
   }
 
@@ -220,5 +240,29 @@ export class MainContainerComponent {
       ...this.newShare,
     });
     this.closeModals();
+  }
+
+  /**
+   * Combine all memories, milestones, and photo events in date order for the timeline.
+   */
+  composeTimeline() {
+    // Convert memories to timeline entries
+    const memoryEvents = this.memories.flatMap((m: any) =>
+      (Array.isArray(m.photoUrls) && m.photoUrls.length > 0)
+        ? m.photoUrls.map((photoUrl: string) => ({ ...m, type: 'memory', photoUrl }))
+        : [{ ...m, type: 'memory', photoUrl: undefined }]
+    );
+    // Convert milestones to timeline entries
+    const milestoneEvents = this.milestones.map((m: any) => ({
+      ...m, type: 'milestone', photoUrl: ''
+    }));
+    // Convert photos to timeline entries not already included as memory photos
+    const photoEvents = this.photos.map((p: any) => ({
+      ...p, type: 'photo', description: '', // Assign type for correct icon
+    }));
+
+    // Combine, then sort by date descending
+    return [...memoryEvents, ...milestoneEvents, ...photoEvents]
+      .sort((a: any, b: any) => (b.date > a.date ? 1 : b.date < a.date ? -1 : 0));
   }
 }
