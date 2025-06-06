@@ -151,18 +151,67 @@
         <div *ngSwitchCase="'scrapbook'" class="pmh-section-placeholder">
           <h2>Scrapbook</h2>
           <button (click)="openAddScrapbook()" style="float:right;margin-bottom:0.5em;">Add Page</button>
-          <div *ngIf="scrapbookPages.length === 0" style="color:#bfa86a;padding:1.2em 0;">No scrapbook pages yet.</div>
-          <div *ngFor="let s of scrapbookPages; let i = index" style="background:#fff;border-radius:12px;padding:1em;margin-bottom:1em;box-shadow:0 2px 8px #6ec6ca1b;">
-            <b>📒 {{ s.title }}</b>
-            <div style="margin:0.44em 0;">
-              <span *ngIf="!s.editing">{{ s.content }}</span>
-              <textarea *ngIf="s.editing" [(ngModel)]="s.content" (blur)="stopEditingScrapbook(i)" rows="3" style="width:97%"></textarea>
-              <button *ngIf="!s.editing" (click)="editScrapbook(i)" style="margin-left:1em;font-size:0.9em;">Edit</button>
-              <button *ngIf="s.editing" (click)="stopEditingScrapbook(i)" style="margin-left:1em;font-size:0.9em;">Save</button>
+
+          <!-- SCRAPBOOK-WIDE DESCRIPTION (editable at top) -->
+          <div style="background:#fcf8e1;border-radius:9px;padding:0.75em 1em;margin-bottom:1em;box-shadow:0 2px 7px #bfa86a24;max-width:500px;">
+            <span *ngIf="!scrapbookDescriptionEditing">{{ scrapbookDescription }}</span>
+            <textarea *ngIf="scrapbookDescriptionEditing"
+              [(ngModel)]="scrapbookDescription"
+              (keydown.enter)="scrapbookDescriptionEditing=false"
+              rows="2"
+              style="width:98%;font-size:1.1em;margin-top:.25em;"
+              (blur)="scrapbookDescriptionEditing=false"></textarea>
+            <button *ngIf="!scrapbookDescriptionEditing" (click)="scrapbookDescriptionEditing=true" style="margin-left:1em;font-size:0.89em;">Edit Description</button>
+            <button *ngIf="scrapbookDescriptionEditing" (click)="scrapbookDescriptionEditing=false" style="margin-left:0.5em;font-size:0.89em;">Save</button>
+          </div>
+
+          <!-- Show all photos in a grid -->
+          <div>
+            <h3 style="margin-top:1.2em;margin-bottom:0.4em;">All Photos</h3>
+            <div *ngIf="isScrapbookPhotoListEmpty" style="color:#bfa86a;padding:1.2em 0;">No photos in scrapbook yet.</div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;">
+              <ng-container *ngFor="let p of scrapbookPhotoList">
+                <div style="background:#fff; border-radius:10px; padding:10px 12px; box-shadow:0 2px 7px #ffb34722; display:flex; flex-direction:column; align-items:center;">
+                  <img [src]="p.photoUrl" [alt]="p.title" style="max-width:100px;max-height:66px;border-radius:7px;border:2px solid #6ec6ca;">
+                  <div style="margin-top:0.33em;font-weight:500;font-size:0.97em;">{{p.title}}</div>
+                  <div style="font-size:0.8em;color:#9aafae">{{p.date}}</div>
+                </div>
+              </ng-container>
             </div>
-            <!-- Show related photos/memories (optional, for visual scrapbook feel) -->
-            <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:0.7em;" *ngIf="scrapbookPhotosForPage().length > 0">
-              <img *ngFor="let p of scrapbookPhotosForPage()" [src]="p.photoUrl" style="max-width:70px;max-height:48px;border-radius:6px;border:1.5px solid #bfa86a;">
+          </div>
+
+          <!-- Show all milestones & memories below (auto-updating, real-time) -->
+          <div style="margin-top:2em;">
+            <h3>All Milestones & Memories</h3>
+            <div *ngIf="scrapbookEventList.length === 0" style="color:#bfa86a;padding:1.2em 0;">No milestones or memories yet.</div>
+            <div *ngFor="let ev of scrapbookEventList">
+              <div style="background:#fff;border-radius:10px;padding:0.85em 1em;margin-bottom:0.68em;box-shadow:0 2px 8px #6ec6ca13;">
+                <b *ngIf="ev.kind==='milestone'">🎉 {{ev.title}}</b>
+                <b *ngIf="ev.kind==='memory'">🧸 {{ev.title}}</b>
+                <span style="font-size:0.87em;color:#7fa7b1;margin-left:0.7em;">{{ev.date}}</span>
+                <div style="margin:0.35em 0 0.12em 0;">{{ev.description}}</div>
+                <div *ngIf="ev.kind === 'memory' && ev.photoUrls?.length > 0" style="display:flex;gap:8px;margin-top:0.25em;">
+                  <img *ngFor="let url of ev.photoUrls" [src]="url" style="max-width:55px;max-height:38px;border-radius:5px;border:1.5px solid #bfa86a;">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- User-added scrapbook pages -->
+          <div *ngIf="scrapbookPages.length > 0" style="margin-top:2em;">
+            <h3>Your Custom Scrapbook Pages</h3>
+            <div *ngFor="let s of scrapbookPages; let i = index" style="background:#fff;border-radius:12px;padding:1em;margin-bottom:1em;box-shadow:0 2px 8px #6ec6ca1b;">
+              <b>📒 {{ s.title }}</b>
+              <div style="margin:0.44em 0;">
+                <span *ngIf="!s.editing">{{ s.content }}</span>
+                <textarea *ngIf="s.editing" [(ngModel)]="s.content" (blur)="stopEditingScrapbook(i)" rows="3" style="width:97%"></textarea>
+                <button *ngIf="!s.editing" (click)="editScrapbook(i)" style="margin-left:1em;font-size:0.9em;">Edit</button>
+                <button *ngIf="s.editing" (click)="stopEditingScrapbook(i)" style="margin-left:1em;font-size:0.9em;">Save</button>
+              </div>
+              <!-- Show related photos/memories (optional, for visual scrapbook feel) -->
+              <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:0.7em;" *ngIf="scrapbookPhotosForPage().length > 0">
+                <img *ngFor="let p of scrapbookPhotosForPage()" [src]="p.photoUrl" style="max-width:70px;max-height:48px;border-radius:6px;border:1.5px solid #bfa86a;">
+              </div>
             </div>
           </div>
         </div>

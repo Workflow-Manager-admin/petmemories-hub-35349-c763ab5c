@@ -26,6 +26,61 @@ export class MainContainerComponent {
   scrapbookPages: any[] = [];
   shareLinks: any[] = [];
 
+  // Scrapbook-wide editable description
+  scrapbookDescription: string = 'A growing story of all precious memories and milestones.';
+  scrapbookDescriptionEditing = false;
+
+  /**
+   * PUBLIC_INTERFACE
+   * Returns scrapbook-ready photos: user-uploaded + memories' photos, with title, photoUrl, date.
+   */
+  get scrapbookPhotoList(): { title: string, photoUrl: string, date: string }[] {
+    const fromMemories =
+      this.memories
+        .filter(m => Array.isArray(m.photoUrls) && m.photoUrls.length > 0)
+        .flatMap(m =>
+          m.photoUrls.map((url: string, i: number) => ({
+            title: m.title + (m.photoUrls.length > 1 ? ` (${i + 1})` : ''),
+            photoUrl: url,
+            date: m.date,
+          }))
+        );
+
+    return [
+      ...this.photos,
+      ...fromMemories
+    ];
+  }
+
+  /**
+   * PUBLIC_INTERFACE
+   * Returns all milestones and memories in date-descending order with a "kind" property for use in template.
+   */
+  get scrapbookEventList(): Array<any> {
+    const milestoneEvents = this.milestones.map(m => ({
+      ...m,
+      kind: 'milestone',
+    }));
+
+    const memoryEvents = this.memories.map(m => ({
+      ...m,
+      kind: 'memory',
+    }));
+
+    // date descending
+    return [...milestoneEvents, ...memoryEvents].sort((a: any, b: any) =>
+      b.date > a.date ? 1 : b.date < a.date ? -1 : 0
+    );
+  }
+
+  /**
+   * PUBLIC_INTERFACE
+   * Returns true if scrapbookPhotoList is empty
+   */
+  get isScrapbookPhotoListEmpty(): boolean {
+    return this.scrapbookPhotoList.length === 0;
+  }
+
   // Modal and form state for each section
   photoModalOpen = false;
   newPhoto: any = { title: '', file: null, preview: '', date: this.dateStringToday() };
