@@ -5,12 +5,36 @@
       <h2>PetMemories Hub</h2>
     </div>
     <ul class="sidebar-menu">
-      <li><a href="#" class="active"><span class="icon">📖</span> Timeline</a></li>
-      <li><a href="#"><span class="icon">📸</span> Photos</a></li>
-      <li><a href="#"><span class="icon">🎉</span> Milestones</a></li>
-      <li><a href="#"><span class="icon">📒</span> Scrapbook</a></li>
-      <li><a href="#"><span class="icon">🔗</span> Share</a></li>
-      <li><a href="#"><span class="icon">⚙️</span> Settings</a></li>
+      <li>
+        <a href="#" [class.active]="activeSection === 'timeline'" (click)="selectSection('timeline'); $event.preventDefault()">
+          <span class="icon">📖</span> Timeline
+        </a>
+      </li>
+      <li>
+        <a href="#" [class.active]="activeSection === 'photos'" (click)="selectSection('photos'); $event.preventDefault()">
+          <span class="icon">📸</span> Photos
+        </a>
+      </li>
+      <li>
+        <a href="#" [class.active]="activeSection === 'milestones'" (click)="selectSection('milestones'); $event.preventDefault()">
+          <span class="icon">🎉</span> Milestones
+        </a>
+      </li>
+      <li>
+        <a href="#" [class.active]="activeSection === 'scrapbook'" (click)="selectSection('scrapbook'); $event.preventDefault()">
+          <span class="icon">📒</span> Scrapbook
+        </a>
+      </li>
+      <li>
+        <a href="#" [class.active]="activeSection === 'share'" (click)="selectSection('share'); $event.preventDefault()">
+          <span class="icon">🔗</span> Share
+        </a>
+      </li>
+      <li>
+        <a href="#" [class.active]="activeSection === 'settings'" (click)="selectSection('settings'); $event.preventDefault()">
+          <span class="icon">⚙️</span> Settings
+        </a>
+      </li>
     </ul>
     <div class="sidebar-footer">
       <p>Celebrating <span class="heart">♥</span> your pet's journey!</p>
@@ -19,12 +43,38 @@
   <div class="pmh-main-content">
     <header class="pmh-header">
       <h1>Welcome to <span class="brand">MyPetStory</span>!</h1>
-      <button class="add-memory-btn" type="button">
+      <button class="add-memory-btn" type="button" (click)="onAddMemory()">
         ＋ Add Memory
       </button>
     </header>
     <section class="pmh-timeline-section">
-      <pmh-timeline></pmh-timeline>
+      <ng-container [ngSwitch]="activeSection">
+        <pmh-timeline *ngSwitchCase="'timeline'"></pmh-timeline>
+        <div *ngSwitchCase="'photos'" class="pmh-section-placeholder">
+          <h2>Photos</h2>
+          <p>Here you can view and add photos.</p>
+        </div>
+        <div *ngSwitchCase="'milestones'" class="pmh-section-placeholder">
+          <h2>Milestones</h2>
+          <p>Record or see your pet milestones here.</p>
+        </div>
+        <div *ngSwitchCase="'scrapbook'" class="pmh-section-placeholder">
+          <h2>Scrapbook</h2>
+          <p>Your printable or digital scrapbook coming soon.</p>
+        </div>
+        <div *ngSwitchCase="'share'" class="pmh-section-placeholder">
+          <h2>Share</h2>
+          <p>Share your pet's story via unique links.</p>
+        </div>
+        <div *ngSwitchCase="'settings'" class="pmh-section-placeholder">
+          <h2>Settings</h2>
+          <p>Update your preferences and settings here.</p>
+        </div>
+        <div *ngSwitchCase="'add-memory'" class="pmh-section-placeholder">
+          <h2>Add Memory</h2>
+          <p>[Add memory form or modal will go here]</p>
+        </div>
+      </ng-container>
     </section>
   </div>
 </div>

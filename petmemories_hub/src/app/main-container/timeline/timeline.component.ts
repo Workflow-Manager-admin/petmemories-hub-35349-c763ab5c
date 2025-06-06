@@ -19,29 +19,29 @@ export class TimelineComponent {
     {
       type: 'photo',
       date: '2024-04-20',
-      title: 'Bella\'s First Day Home',
-      description: 'Welcome Bella with love and cuddles.',
+      title: 'First Day Home',
+      description: 'Welcome your pet with love and cuddles.',
       photoUrl: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?fit=crop&w=400&q=80'
     },
     {
       type: 'milestone',
       date: '2024-06-10',
       title: 'First Bath',
-      description: 'Splish splash! Bella had her first bath today.',
+      description: 'Splish splash! The first bath adventure.',
       photoUrl: ''
     },
     {
       type: 'memory',
       date: '2024-08-15',
       title: 'Birthday',
-      description: 'Celebrated Bella\'s first birthday with a cake.',
+      description: 'Celebrated a special birthday with a treat.',
       photoUrl: 'https://images.unsplash.com/photo-1508672019048-805c876b67e2?fit=crop&w=400&q=80'
     },
     {
       type: 'milestone',
       date: '2024-10-22',
-      title: 'Learned to Sit',
-      description: 'Such a smart pup!',
+      title: 'Learned a New Trick',
+      description: 'Mastered a new skill!',
       photoUrl: ''
     }
   ];

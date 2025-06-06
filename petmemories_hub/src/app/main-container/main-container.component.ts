@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { TimelineComponent } from './timeline/timeline.component';
 
 /**
@@ -11,6 +12,30 @@ import { TimelineComponent } from './timeline/timeline.component';
   templateUrl: './main-container.component.html',
   styleUrl: './main-container.component.css',
   standalone: true,
-  imports: [TimelineComponent],
+  imports: [CommonModule, TimelineComponent],
 })
-export class MainContainerComponent {}
+export class MainContainerComponent {
+  /** Tracks the currently selected section in the UI. */
+  activeSection: string = 'timeline';
+
+  /**
+   * PUBLIC_INTERFACE
+   * Changes the visible section in the main content based on navigation.
+   * @param section Section identifier
+   */
+  selectSection(section: string) {
+    if (section === 'add-memory') {
+      this.activeSection = 'add-memory';
+    } else {
+      this.activeSection = section;
+    }
+  }
+
+  /**
+   * PUBLIC_INTERFACE
+   * Handler for Add Memory button; navigates to 'add-memory' section.
+   */
+  onAddMemory() {
+    this.activeSection = 'add-memory';
+  }
+}
