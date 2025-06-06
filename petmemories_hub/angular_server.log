@@ -597,3 +597,468 @@ Application bundle generation complete. [0.362 seconds]
 
 
 Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        |  30.66 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+chunk-ECCBLRVO.mjs  | -           |  31.13 kB | 
+server.mjs          | server      |   1.39 kB | 
+main.server.mjs     | main.server | 800 bytes | 
+
+Application bundle generation complete. [0.359 seconds]
+
+▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:36:
+      8 │   imports: [MainContainerComponent, TimelineComponent],
+        ╵                                     ~~~~~~~~~~~~~~~~~
+
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.450 seconds]
+
+▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:36:
+      8 │   imports: [MainContainerComponent, TimelineComponent],
+        ╵                                     ~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8003: No directive found with exportAs 'ngForm'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:56:71:
+      56 │ ...rm (ngSubmit)="addPhoto()" autocomplete="off" #photoForm="ngForm">
+         ╵                                                              ~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:12:15:
+      12 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:57:40:
+      57 │ ...uired type="text" [(ngModel)]="newPhoto.title" name="title" pla...
+         ╵                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:12:15:
+      12 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:58:40:
+      58 │ ...uired type="date" [(ngModel)]="newPhoto.date" name="date" style...
+         ╵                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:12:15:
+      12 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8003: No directive found with exportAs 'ngForm'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:71:79:
+      71 │ ...bmit)="addMilestone()" autocomplete="off" #milestoneForm="ngForm">
+         ╵                                                              ~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:12:15:
+      12 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:72:40:
+      72 │ ...red type="text" [(ngModel)]="newMilestone.title" name="title" p...
+         ╵                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:12:15:
+      12 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:73:40:
+      73 │ ... type="text" [(ngModel)]="newMilestone.description" name="descr...
+         ╵                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:12:15:
+      12 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:74:40:
+      74 │ ...red type="date" [(ngModel)]="newMilestone.date" name="date" sty...
+         ╵                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:12:15:
+      12 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8003: No directive found with exportAs 'ngForm'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:84:73:
+      84 │ ... (ngSubmit)="addMemory()" autocomplete="off" #memoryForm="ngForm">
+         ╵                                                              ~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:12:15:
+      12 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:85:40:
+      85 │ ...ired type="text" [(ngModel)]="newMemory.title" name="title" pla...
+         ╵                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:12:15:
+      12 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:86:40:
+      86 │ ...d type="text" [(ngModel)]="newMemory.description" name="descrip...
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:12:15:
+      12 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:87:40:
+      87 │ ...uired type="date" [(ngModel)]="newMemory.date" name="date" styl...
+         ╵                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:12:15:
+      12 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:98:40:
+      98 │ ...d type="text" [(ngModel)]="newScrapbookPage.title" name="title"...
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:12:15:
+      12 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'textarea'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:99:31:
+      99 │ ...rea required [(ngModel)]="newScrapbookPage.content" name="conte...
+         ╵                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:12:15:
+      12 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:110:31:
+      110 │ ...input type="text" [(ngModel)]="newShare.note" name="note" plac...
+          ╵                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:12:15:
+      12 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'select'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:111:20:
+      111 │             <select [(ngModel)]="newShare.type" name="type" style...
+          ╵                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:12:15:
+      12 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.693 seconds]
+
+▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:36:
+      8 │   imports: [MainContainerComponent, TimelineComponent],
+        ╵                                     ~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8003: No directive found with exportAs 'ngForm'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:56:71:
+      56 │ ...rm (ngSubmit)="addPhoto()" autocomplete="off" #photoForm="ngForm">
+         ╵                                                              ~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:57:40:
+      57 │ ...uired type="text" [(ngModel)]="newPhoto.title" name="title" pla...
+         ╵                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:58:40:
+      58 │ ...uired type="date" [(ngModel)]="newPhoto.date" name="date" style...
+         ╵                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8003: No directive found with exportAs 'ngForm'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:71:79:
+      71 │ ...bmit)="addMilestone()" autocomplete="off" #milestoneForm="ngForm">
+         ╵                                                              ~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:72:40:
+      72 │ ...red type="text" [(ngModel)]="newMilestone.title" name="title" p...
+         ╵                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:73:40:
+      73 │ ... type="text" [(ngModel)]="newMilestone.description" name="descr...
+         ╵                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:74:40:
+      74 │ ...red type="date" [(ngModel)]="newMilestone.date" name="date" sty...
+         ╵                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8003: No directive found with exportAs 'ngForm'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:84:73:
+      84 │ ... (ngSubmit)="addMemory()" autocomplete="off" #memoryForm="ngForm">
+         ╵                                                              ~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:85:40:
+      85 │ ...ired type="text" [(ngModel)]="newMemory.title" name="title" pla...
+         ╵                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:86:40:
+      86 │ ...d type="text" [(ngModel)]="newMemory.description" name="descrip...
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:87:40:
+      87 │ ...uired type="date" [(ngModel)]="newMemory.date" name="date" styl...
+         ╵                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:98:40:
+      98 │ ...d type="text" [(ngModel)]="newScrapbookPage.title" name="title"...
+         ╵                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'textarea'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:99:31:
+      99 │ ...rea required [(ngModel)]="newScrapbookPage.content" name="conte...
+         ╵                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:110:31:
+      110 │ ...input type="text" [(ngModel)]="newShare.note" name="note" plac...
+          ╵                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'select'. [plugin angular-compiler]
+
+    src/app/main-container/main-container.component.html:111:20:
+      111 │             <select [(ngModel)]="newShare.type" name="type" style...
+          ╵                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component MainContainerComponent.
+
+    src/app/main-container/main-container.component.ts:13:15:
+      13 │   templateUrl: './main-container.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+polyfills.js         | polyfills        |  90.20 kB | 
+main.js              | main             |  63.04 kB | 
+styles.css           | styles           |  95 bytes | 
+
+                     | Initial total    | 153.34 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+polyfills.server.mjs | polyfills.server | 572.91 kB | 
+chunk-DK27JTUP.mjs   | -                |  63.51 kB | 
+server.mjs           | server           |   1.39 kB | 
+main.server.mjs      | main.server      | 800 bytes | 
+
+Application bundle generation complete. [0.474 seconds]
+
+▲ [WARNING] TS-998113: TimelineComponent is not used within the template of AppComponent [plugin angular-compiler]
+
+    src/app/app.component.ts:8:36:
+      8 │   imports: [MainContainerComponent, TimelineComponent],
+        ╵                                     ~~~~~~~~~~~~~~~~~
+
+
+5:45:25 PM [vite] (ssr) ✨ new dependencies optimized: @angular/forms
+5:45:25 PM [vite] (ssr) ✨ optimized dependencies changed. reloading
+Page reload sent to client(s).

@@ -48,31 +48,133 @@
       </button>
     </header>
     <section class="pmh-timeline-section">
+      <!-- Add modals (basic) for each feature -->
+      <!-- Photo Modal -->
+      <div class="pmh-modal" *ngIf="photoModalOpen" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:900;background:rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;">
+        <div style="background:#fff8e1;padding:1.5rem;border-radius:18px;width:98%;max-width:380px;box-shadow:0 2px 24px #6ec6ca27;">
+          <h3>Add Photo</h3>
+          <form (ngSubmit)="addPhoto()" autocomplete="off" #photoForm="ngForm">
+            <input required type="text" [(ngModel)]="newPhoto.title" name="title" placeholder="Photo Title" style="width:95%;margin-bottom:0.6rem;" /><br>
+            <input required type="date" [(ngModel)]="newPhoto.date" name="date" style="margin-bottom:0.75rem;"><br>
+            <input required type="file" accept="image/*" (change)="handlePhotoFileInput($event)" style="margin-bottom:0.5rem;"><br>
+            <img *ngIf="newPhoto.preview" [src]="newPhoto.preview" alt="preview" style="max-width:150px;max-height:90px;margin-bottom:0.8rem;border-radius:7px;border:2.5px solid #6ec6ca;">
+            <br>
+            <button type="submit" [disabled]="!newPhoto.title || !newPhoto.preview" style="margin-right:0.6em;">Add</button>
+            <button type="button" (click)="closeModals()">Cancel</button>
+          </form>
+        </div>
+      </div>
+      <!-- Milestone Modal -->
+      <div class="pmh-modal" *ngIf="milestoneModalOpen" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:900;background:rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;">
+        <div style="background:#fff8e1;padding:1.5rem;border-radius:18px;width:98%;max-width:340px;box-shadow:0 2px 22px #ffb34729;">
+          <h3>Add Milestone</h3>
+          <form (ngSubmit)="addMilestone()" autocomplete="off" #milestoneForm="ngForm">
+            <input required type="text" [(ngModel)]="newMilestone.title" name="title" placeholder="Milestone Title" style="width:95%;margin-bottom:0.6rem;" /><br>
+            <input required type="text" [(ngModel)]="newMilestone.description" name="description" placeholder="Description" style="width:95%;margin-bottom:0.6rem;" /><br>
+            <input required type="date" [(ngModel)]="newMilestone.date" name="date" style="margin-bottom:0.5rem;"><br>
+            <button type="submit" [disabled]="!newMilestone.title || !newMilestone.date">Add</button>
+            <button type="button" (click)="closeModals()">Cancel</button>
+          </form>
+        </div>
+      </div>
+      <!-- Memory Modal -->
+      <div class="pmh-modal" *ngIf="memoryModalOpen" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:900;background:rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;">
+        <div style="background:#fff8e1;padding:1.5rem;border-radius:18px;width:98%;max-width:340px;box-shadow:0 2px 22px #bfa86a1b;">
+          <h3>Add Memory</h3>
+          <form (ngSubmit)="addMemory()" autocomplete="off" #memoryForm="ngForm">
+            <input required type="text" [(ngModel)]="newMemory.title" name="title" placeholder="Memory Title" style="width:95%;margin-bottom:0.6rem;" /><br>
+            <input required type="text" [(ngModel)]="newMemory.description" name="description" placeholder="Description" style="width:95%;margin-bottom:0.6rem;" /><br>
+            <input required type="date" [(ngModel)]="newMemory.date" name="date" style="margin-bottom:0.5rem;"><br>
+            <button type="submit" [disabled]="!newMemory.title || !newMemory.date">Add</button>
+            <button type="button" (click)="closeModals()">Cancel</button>
+          </form>
+        </div>
+      </div>
+      <!-- Scrapbook Modal -->
+      <div class="pmh-modal" *ngIf="scrapbookModalOpen" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:900;background:rgba(0,0,0,0.13);display:flex;align-items:center;justify-content:center;">
+        <div style="background:#fff8e1;padding:1.5rem;border-radius:18px;width:98%;max-width:340px;box-shadow:0 2px 22px #6ec6ca17;">
+          <h3>Add Scrapbook Page</h3>
+          <form (ngSubmit)="addScrapbookPage()" autocomplete="off">
+            <input required type="text" [(ngModel)]="newScrapbookPage.title" name="title" placeholder="Page Title" style="width:95%;margin-bottom:0.6rem;"/><br>
+            <textarea required [(ngModel)]="newScrapbookPage.content" name="content" rows="4" placeholder="Page Content" style="width:95%;margin-bottom:0.6rem;"></textarea><br>
+            <button type="submit" [disabled]="!newScrapbookPage.title || !newScrapbookPage.content">Add</button>
+            <button type="button" (click)="closeModals()">Cancel</button>
+          </form>
+        </div>
+      </div>
+      <!-- Share Modal -->
+      <div class="pmh-modal" *ngIf="shareModalOpen" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:900;background:rgba(0,0,0,0.12);display:flex;align-items:center;justify-content:center;">
+        <div style="background:#fff8e1;padding:1.5rem;border-radius:18px;width:98%;max-width:340px;box-shadow:0 2px 18px #ffb34722;">
+          <h3>Create Share Link</h3>
+          <form (ngSubmit)="addShare()" autocomplete="off">
+            <input type="text" [(ngModel)]="newShare.note" name="note" placeholder="Optional Note" style="width:95%;margin-bottom:0.6rem;" /><br>
+            <select [(ngModel)]="newShare.type" name="type" style="margin-bottom:0.7rem;width:98%;">
+              <option value="public">Public Link</option>
+              <option value="private">Private Link</option>
+            </select><br>
+            <button type="submit">Generate</button>
+            <button type="button" (click)="closeModals()">Cancel</button>
+          </form>
+        </div>
+      </div>
       <ng-container [ngSwitch]="activeSection">
         <pmh-timeline *ngSwitchCase="'timeline'"></pmh-timeline>
         <div *ngSwitchCase="'photos'" class="pmh-section-placeholder">
           <h2>Photos</h2>
-          <p>Here you can view and add photos.</p>
+          <button (click)="openAddPhoto()" style="float:right;margin-bottom:0.5em;">Add Photo</button>
+          <div *ngIf="photos.length === 0" style="color:#bfa86a;padding:1.2em 0;">No photos yet.</div>
+          <div style="display:flex;flex-wrap:wrap;gap:16px;">
+            <div *ngFor="let p of photos" style="background:#fff;border-radius:10px;padding:10px 12px;box-shadow:0 2px 7px #ffb34722;display:flex;flex-direction:column;align-items:center;">
+              <img [src]="p.photoUrl" [alt]="p.title" style="max-width:140px;max-height:100px;border-radius:7px;border:2.5px solid #6ec6ca;">
+              <div style="margin-top:0.6em;"><b>{{p.title}}</b></div>
+              <div style="font-size:0.92em;color:#8faeab">{{p.date}}</div>
+            </div>
+          </div>
         </div>
         <div *ngSwitchCase="'milestones'" class="pmh-section-placeholder">
           <h2>Milestones</h2>
-          <p>Record or see your pet milestones here.</p>
+          <button (click)="openAddMilestone()" style="float:right;margin-bottom:0.5em;">Add Milestone</button>
+          <div *ngIf="milestones.length === 0" style="color:#bfa86a;padding:1.2em 0;">No milestones yet.</div>
+          <div *ngFor="let m of milestones" style="background:#fcf8e1;border-radius:12px;padding:1em;margin-bottom:0.8em;box-shadow:0 2px 7px #ffb3471a;">
+            <b>🎉 {{ m.title }}</b>
+            <div style="font-size:0.96em;color:#8faeab">{{m.date}}</div>
+            <div style="font-size:0.99em;">{{ m.description }}</div>
+          </div>
         </div>
         <div *ngSwitchCase="'scrapbook'" class="pmh-section-placeholder">
           <h2>Scrapbook</h2>
-          <p>Your printable or digital scrapbook coming soon.</p>
+          <button (click)="openAddScrapbook()" style="float:right;margin-bottom:0.5em;">Add Page</button>
+          <div *ngIf="scrapbookPages.length === 0" style="color:#bfa86a;padding:1.2em 0;">No scrapbook pages yet.</div>
+          <div *ngFor="let s of scrapbookPages" style="background:#fff;border-radius:12px;padding:1em;margin-bottom:1em;box-shadow:0 2px 8px #6ec6ca1b;">
+            <b>📒 {{ s.title }}</b>
+            <div style="margin:0.44em 0;">{{ s.content }}</div>
+          </div>
         </div>
         <div *ngSwitchCase="'share'" class="pmh-section-placeholder">
           <h2>Share</h2>
-          <p>Share your pet's story via unique links.</p>
+          <button (click)="openAddShare()" style="float:right;margin-bottom:0.5em;">Create Share Link</button>
+          <div *ngIf="shareLinks.length === 0" style="color:#bfa86a;padding:1.2em 0;">No share links generated yet.</div>
+          <div *ngFor="let s of shareLinks" style="margin-bottom:0.8em;">
+            <div style="background:#fff8e1;border-radius:8px;padding:0.6em 1em;border:1.7px dashed #6ec6ca;">
+              <span style="font-weight:700;">🔗 <a [href]="s.link" target="_blank">{{ s.link }}</a></span>
+              <span *ngIf="s.type === 'private'" style="background:#ffb34722;margin-left:0.7em;padding:2px 7px;border-radius:12px;font-size:0.9em;color:#a25c02;">Private</span>
+              <span *ngIf="s.note" style="color:#754309;margin-left:0.7em;">({{s.note}})</span>
+            </div>
+          </div>
+        </div>
+        <div *ngSwitchCase="'memories'" class="pmh-section-placeholder">
+          <h2>Memories</h2>
+          <button (click)="openAddMemoryDirect()" style="float:right;margin-bottom:0.5em;">Add Memory</button>
+          <div *ngIf="memories.length === 0" style="color:#bfa86a;padding:1.2em 0;">No memories yet.</div>
+          <div *ngFor="let me of memories" style="background:#fff8e1;border-radius:12px;padding:1em;margin-bottom:0.8em;box-shadow:0 2px 7px #bfa86a1b;">
+            <b>🧸 {{ me.title }}</b>
+            <div style="font-size:0.96em;color:#8faeab">{{me.date}}</div>
+            <div style="font-size:0.99em;">{{ me.description }}</div>
+          </div>
         </div>
         <div *ngSwitchCase="'settings'" class="pmh-section-placeholder">
           <h2>Settings</h2>
           <p>Update your preferences and settings here.</p>
-        </div>
-        <div *ngSwitchCase="'add-memory'" class="pmh-section-placeholder">
-          <h2>Add Memory</h2>
-          <p>[Add memory form or modal will go here]</p>
         </div>
       </ng-container>
     </section>
